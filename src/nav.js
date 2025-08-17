@@ -1,11 +1,14 @@
 import React from 'react';
 import {navLinks} from './link-content';
 import Links from './links';
+import logo from './assets/logo.png';
 export default function Nav() {
   return (
-    <nav>
-      <img src="logo.png" alt="Little Lemon Logo" />
-      <Links className = "nav-links" links={navLinks}/>
+    <nav className="nav-container">
+      <div className="nav">
+        <img src={logo} alt="Little Lemon Logo" />
+        <Links className = "nav-links" links={navLinks}/>
+      </div>
     </nav>
   );
 }

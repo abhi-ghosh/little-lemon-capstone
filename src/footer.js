@@ -1,10 +1,11 @@
 import React from 'react';
 import {navLinks, footerLinks} from './link-content';
 import Links from './links';
+import logo from './assets/logo.png';
 export default function Footer() {
   return (
     <footer>
-      <img src="logo.png" alt="Little Lemon Logo" />
+      <img src={logo} alt= "Little Lemon Logo" />
       <div className='dormat-navigation'>
         <p>Doormat Navigation</p>
         <Links className="footer-links" links={navLinks} />

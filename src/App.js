@@ -3,15 +3,13 @@ import React from 'react';
 import Footer from './footer';
 import Header from './header';
 import Main from './main';
-import Nav from './nav';
 function App() {
   return (
-    <>
+    <div className='App'>
       <Header/>
-      <Nav/>
       <Main/>
       <Footer/>
-    </>
+    </div>
   );
 }
 
