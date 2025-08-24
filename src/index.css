@@ -125,7 +125,7 @@ nav a:hover::after {
 .hero-top h3 {
   font-size: 40px;
 }
-.hero img { 
+.hero img {
   width: 360px;
   height: 390px;
   object-fit: cover;
@@ -157,4 +157,92 @@ nav a:hover::after {
 .reserve-button:active{
   color: #F4CE14;
   border-color: #F4CE14;
+}
+.specials-card {
+  width: 265px;
+  height: 440px;
+  background-color: #F4CE14;
+  border: 5px solid green;
+  display: flex; /* make the whole card a flex container */
+  flex-direction: column;
+}
+.specials-card > img {
+  display: block;       /* removes inline gap */
+  width: 100%;          /* use full width */
+  height: auto;         /* maintain aspect ratio */
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  aspect-ratio: 4.5/3;
+}
+.order-button img {
+  height: 18px;
+  width: auto;
+}
+.card-text {
+  background-color: red;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 1.5rem 1.5rem 1.5rem;
+}
+.name-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.name-price p {
+  margin: 0; /* reset browser default */
+}
+.name-price>p:nth-child(1) {
+  font-family: 'Markazi Text', serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 0;
+}
+.name-price>p:nth-child(2) {
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #EE9972;
+}
+.description {
+  text-align: left;
+
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+}
+.order-button {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.order-button button {
+  border: none;        /* Removes the default border */
+  background: none;    /* Removes the gray background */
+  outline: none;
+  padding: 0;
+  font-family: 'karla';
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  position: relative;
+}
+.order-button img {
+  margin-left: 0.5rem;
+}
+.order-button button::after {
+  content: "";
+  position: absolute;
+  left: 50%;            /* start from the center */
+  bottom:0;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color:black;
+  transition: width 0.3s ease;
+}
+
+.order-button button:hover::after {
+  width: 100%; /* expand underline to full width */
 }
