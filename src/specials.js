@@ -4,8 +4,10 @@ import SpecialsCard from './specials-card';
 export default function Specials() {
   return (
     <section className="specials-section">
-        <h2>Specials</h2>
+      <div className='specials-header'>
+        <h2>This weeks specials!</h2>
         <button>Online Menu</button>
+      </div>
         {specials.map((special, index) => {
           return (
             <SpecialsCard
