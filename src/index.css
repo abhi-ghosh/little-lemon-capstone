@@ -13,7 +13,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-/* ====== NAVBAR RESPONSIVE ====== */
 
 /* Hamburger hidden on desktop */
 .hamburger {
@@ -435,6 +434,66 @@ nav a:hover::after {
     cursor: pointer;
     border-radius: 1rem;
     transition: background-color 0.3s ease;
+}
+.reserve-button:hover {
+  background-color: #495E57;
+  color: white;
+  border: white 0.1rem solid;
+  padding:0.9rem; /* slightly smaller padding on hover */
+}
+.reserve-button:active{
+  color: #F4CE14;
+  border-color: #F4CE14;
+}
+.specials-section {
+  margin: 0;
+  padding:1rem; /* space for overlapping image */
+  display: flex;
+  flex-direction: column;
+  max-width: 100%; /* boxed width */
+  gap: 1.5rem; /* spacing between all items */
+  align-items: start; /* makes things align nicely at the top */
+}
+.specials-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers children horizontally */
+  text-align: center;
+  width: 100%;
+}
+/* Place header and button on the first row */
+.specials-header > h2 {
+  font-size: 50px;
+  font-family: 'Markazi Text', serif;  
+        /* reset browser default */
+}
+
+.specials-header > button {
+  margin: 0;
+  font-family: 'Karla', sans-serif;
+  font-weight: 900;
+  background-color: #F4CE14;
+  border: none;
+  width: 100%;
+  padding: 1.1rem 2.2rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+.specials-header > button:hover {
+  background-color: #495E57;
+  color: white;
+}
+.specials-header > button:active{
+  color: #F4CE14;
+  border-color: #F4CE14;
+}
+.specials-card{
+  border-radius: 0;
+}
+.specials-card > img {
+  border-radius: 0;
 }
 }
 
