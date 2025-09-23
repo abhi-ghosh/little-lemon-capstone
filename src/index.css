@@ -309,6 +309,80 @@ nav a:hover::after {
 .order-button button:hover::after {
   width: 100%; /* expand underline to full width */
 }
+.rating-card{
+  margin-top: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.rating-container {
+  width: 100%;
+}
+.rating-container > h1 {
+  font-family: 'Markazi Text', serif;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0; /* reset ALL margins */
+  padding: 0; /* reset padding, just in case */
+  margin-bottom: 2rem; /* only keep spacing below */
+}
+.details {
+  display: flex;
+ justify-content: space-between;
+}
+.rating-item{
+  background-color: white;
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap:1rem;
+  padding: 1rem;
+  width: 180px;
+  height: 150px;
+  border: #333 1px solid;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.rating-card{
+  background-color: #F4CE14;
+  height: 30rem;
+}
+.rating-container {
+    max-width: 60%;
+    margin: auto;
+}
+.stars {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.2rem;
+}
+.star {
+  width: 20px;
+  height: 20px;
+}
+.rating-profile {
+  display: flex;
+  align-items: center;
+}
+.rating-profile>p {
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  color: #333;
+}
+.rating-profile>img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 0.5rem;
+  border: #333 1px solid;
+}
+.comment {
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  margin:0;
+  padding: 0;
+  color: #333;
+}
 /* MEDIA QUERIES BEGIN------------------------------------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   .nav{
@@ -367,6 +441,7 @@ nav a:hover::after {
     transform: translateY(-10px);
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1;
   }
   .nav-links.active {
     opacity: 1;
@@ -464,7 +539,7 @@ nav a:hover::after {
 /* Place header and button on the first row */
 .specials-header > h2 {
   font-size: 50px;
-  font-family: 'Markazi Text', serif;  
+  font-family: 'Markazi Text', serif;
         /* reset browser default */
 }
 
@@ -496,5 +571,6 @@ nav a:hover::after {
   border-radius: 0;
 }
 }
+
 
 /*MEDIA END ------------------------------------------------------------------------------------------------------- */
