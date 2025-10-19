@@ -62,7 +62,7 @@ export default function RatingProfile() {
           Pauses auto-slide on hover
           ----------------------------- */}
       <div className="rating-viewport">
-        <div 
+        <div
           className="rating-list"
           onMouseEnter={() => setIsHovered(true)}  // Pause carousel on hover
           onMouseLeave={() => setIsHovered(false)} // Resume carousel when hover ends
