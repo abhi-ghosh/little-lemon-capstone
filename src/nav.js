@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {navLinks} from './link-content';
 import Links from './links';
 import logo from './assets/logo.png';
@@ -8,6 +8,36 @@ export default function Nav() {
     isOpen?console.log("Menu Closed"):console.log("Menu Opened");
     setIsOpen(!isOpen);
   };
+   // Lock scroll when menu is open
+  useEffect(() => {
+      if (isOpen) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = 'auto';
+      }
+
+      // Cleanup on unmount
+      return () => {
+        document.body.style.overflow = 'auto';
+      };
+    }, [isOpen]);
+  // Close menu when clicking outside
+useEffect(() => {
+  function handleClickOutside(e) {
+    const nav = document.querySelector(".nav"); // your whole nav container
+
+    // If menu is open AND click is outside nav
+        if (isOpen && nav && !nav.contains(e.target)) {
+          setIsOpen(false);
+        }
+      }
+
+      document.addEventListener("click", handleClickOutside);
+
+      return () => {
+        document.removeEventListener("click", handleClickOutside);
+      };
+    }, [isOpen]);
   return (
     <nav className="nav-container">
       <div className="nav">
