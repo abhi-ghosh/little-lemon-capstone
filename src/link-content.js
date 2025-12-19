@@ -3,10 +3,10 @@ import insta from './assets/insta.png';
 import x from './assets/x.png';
 
 export const navLinks = [
-  { name: 'Home', path: '#' },
+  { name: 'Home', path: '/' },
   { name: 'About', path: '#' },
   { name: 'Menu', path: '#' },
-  { name: 'Reservations', path: '#' },
+  { name: 'Reservations', path: '/reservations' },
   { name: 'Order Online', path: '#' },
   { name: 'Login', path: '#' }
 ]

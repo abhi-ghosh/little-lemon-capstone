@@ -2,12 +2,12 @@ import './App.css';
 import React from 'react';
 import Footer from './footer';
 import Header from './header';
-import Main from './main';
+import { Outlet } from 'react-router';
 function App() {
   return (
     <div className='App'>
       <Header/>
-      <Main/>
+      <Outlet/>
       <Footer/>
     </div>
   );

@@ -575,6 +575,14 @@ nav a:hover::after {
   width: auto;
   margin-right: 0.5rem;
 }
+.booking {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: auto;
+  max-width: 60%;
+  padding: 2rem;
+}
 
 /* MEDIA QUERIES BEGIN------------------------------------------------------------------------------------------------------- */
 @media (max-width: 768px) {
