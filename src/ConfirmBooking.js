@@ -5,16 +5,20 @@ export default function ConfirmBooking() {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="confirmation">
       <h2>Confirm Your Booking</h2>
-
-      <p>Date: {formData.date}</p>
-      <p>Time: {formData.time}</p>
-      <p>Guests: {formData.guests}</p>
-      <p>Occasion: {formData.occasion}</p>
-
-      <button onClick={() => navigate(-1)}>Edit</button>
-      <button onClick={() => navigate("../thankyou")}>Submit</button>
+      <div className="confirmation-details">
+        <p><span>Name:</span> {formData.name}</p>
+        <p><span>Email:</span> {formData.email}</p>
+        <p><span>Date:</span> {formData.date}</p>
+        <p><span>Time:</span> {formData.time}</p>
+        <p><span>Guests:</span> {formData.guests}</p>
+        <p><span>Occasion:</span> {formData.occasion}</p>
+      </div>
+      <div className="confirmation-buttons">
+         <button onClick={() => navigate(-1)}>Edit</button>
+         <button onClick={() => navigate("../thankyou")}>Submit</button>
+      </div>
     </div>
   );
 }

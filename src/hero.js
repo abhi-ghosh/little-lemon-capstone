@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 import hero from "./assets/hero.jpg";
 export default function Hero() {
   return (
@@ -10,7 +11,7 @@ export default function Hero() {
             <h3>Chicago</h3>
           </div>
           <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-          <button className="reserve-button">Reserve a Table</button>
+          <Link to="/reservations"><button className="reserve-button">Reserve a Table</button></Link>
         </div>
         <div>
           <img src={hero} alt="Little Lemon Restaurant" />

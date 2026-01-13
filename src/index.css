@@ -42,7 +42,7 @@ code {
 a {
   text-decoration: none;
 }
-nav a {
+.nav-links a {
   margin-left: 1rem;
   position: relative;
   text-decoration: none;
@@ -52,7 +52,7 @@ nav a {
   padding: 4px 0; /* gives space for underline */
 }
 
-nav a::after {
+.nav-links a::after {
   content: "";
   position: absolute;
   left: 50%;            /* start from the center */
@@ -64,7 +64,7 @@ nav a::after {
   transition: width 0.3s ease;
 }
 
-nav a:hover::after {
+.nav-links a:hover::after {
   width: 100%; /* expand underline to full width */
 }
 .nav>img {
@@ -582,6 +582,91 @@ nav a:hover::after {
   margin: auto;
   max-width: 60%;
   padding: 2rem;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  border: #495E57 2px solid;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+.form-row{
+  display: flex;
+}
+.form-row label {
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  text-align: left;
+  flex: .3;
+}
+.form input, .form select {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+}
+
+.form input:focus, .form select:focus {
+  border-color: #F4CE14;
+  outline: none;
+}
+
+.form input.input-success, .form select.input-success {
+  border-color: #4caf50;
+}
+
+.form input.input-error, .form select.input-error {
+  border-color: #b00020;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+.input-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.error {
+  margin-top: 0.25rem;
+  font-size: 0.8rem;
+  color: #b00020;
+  position: absolute;
+  bottom: -1.2rem;
+}
+
+.primary-btn{
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  background-color: #F4CE14;
+  color: #333;
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.primary-btn:hover{
+  opacity: 0.8;
+}
+.primary-btn:active{
+  color: #F4CE14;
+  border-color: #F4CE14;
+}
+.primary-btn:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
 }
 
 /* MEDIA QUERIES BEGIN------------------------------------------------------------------------------------------------------- */
