@@ -51,6 +51,7 @@ export default function BookingForm() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Name"
+            className={formData.name ? "input-success" : ""}
           />
         </div>
 
@@ -89,6 +90,7 @@ export default function BookingForm() {
             name="date"
             value={formData.date}
             onChange={handleChange}
+            className= {formData.date ? "input-success" : ""}
           />
         </div>
 
@@ -98,6 +100,7 @@ export default function BookingForm() {
             id="time"
             name="time"
             value={formData.time}
+            className= {formData.time ? "input-success" : ""}
             onChange={handleChange}
           >
             <option value="" disabled>Select a time</option>
@@ -117,7 +120,6 @@ export default function BookingForm() {
               id="guests"
               type="number"
               inputMode="numeric"
-              pattern="[1-9]*"
               name="guests"
               value={formData.guests}
               onChange={handleChange}
@@ -138,6 +140,7 @@ export default function BookingForm() {
             name="occasion"
             value={formData.occasion}
             onChange={handleChange}
+            className="input-success"
           >
             <option value="">None</option>
             <option value="birthday">Birthday</option>
