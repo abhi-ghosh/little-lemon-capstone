@@ -116,8 +116,8 @@ export default function BookingForm() {
             <input
               id="guests"
               type="number"
-              min="1"
-              max="8"
+              inputMode="numeric"
+              pattern="[1-9]*"
               name="guests"
               value={formData.guests}
               onChange={handleChange}

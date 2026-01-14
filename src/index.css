@@ -18,9 +18,8 @@ code {
 /* Hamburger hidden on desktop */
 .hamburger {
   display: none;
-  font-size: 1.8rem;
   cursor: pointer;
-  padding: 0%;
+  padding: 0;
   margin: 0;
 }
 
@@ -736,6 +735,9 @@ a {
     transform: translateY(0);
     pointer-events: auto;
   }
+  .nav-links.active a {
+    font-size: 1.7rem;
+  }
   nav a {
     margin-left:0;
     margin: 0 1rem 0 1rem;
@@ -921,6 +923,12 @@ a {
 }
 .socials {
   margin-top: 2rem;
+}
+.booking{
+  max-width: 100%;
+}
+.form-row{
+  grid-template-columns: 1fr;
 }
 }
 
