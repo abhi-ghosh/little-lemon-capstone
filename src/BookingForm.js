@@ -30,11 +30,15 @@ export default function BookingForm() {
   const isEmailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email); //Basic email format validation
   const emailError = formData.email && !isEmailValid;
   const emailSuccess =formData.email && isEmailValid;
+  const isDateValid = formData.date && formData.date >= minDate && formData.date <= maxDate; //Check if "date" is between minDate and maxDate
+  const dateError = formData.date && !isDateValid
+  const dateSuccess =formData.date && isDateValid
+
 
   const isFormValid =
   formData.name &&
   formData.email &&
-  formData.date &&
+  dateSuccess&&
   formData.time &&
   isGuestsValid &&
   isEmailValid;
@@ -82,7 +86,8 @@ export default function BookingForm() {
 
         <div className="form-row">
           <label htmlFor="date">Date:</label>
-          <input
+          <div className="input-column">
+            <input
             id="date"
             type="date"
             min={minDate}
@@ -90,8 +95,16 @@ export default function BookingForm() {
             name="date"
             value={formData.date}
             onChange={handleChange}
-            className= {formData.date ? "input-success" : ""}
-          />
+            className= {
+              dateError
+              ? "input-error"
+              : dateSuccess
+              ? "input-success"
+              : ""
+            }
+            />
+            {dateError && (<span className="error">Please select a date between {minDate} and {maxDate}.</span>)}
+          </div>
         </div>
 
         <div className="form-row">

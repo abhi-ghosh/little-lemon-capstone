@@ -8,12 +8,35 @@ export default function ConfirmBooking() {
     <div className="confirmation">
       <h2>Confirm Your Booking</h2>
       <div className="confirmation-details">
-        <p><span>Name:</span> {formData.name}</p>
-        <p><span>Email:</span> {formData.email}</p>
-        <p><span>Date:</span> {formData.date}</p>
-        <p><span>Time:</span> {formData.time}</p>
-        <p><span>Guests:</span> {formData.guests}</p>
-        <p><span>Occasion:</span> {formData.occasion}</p>
+        <div className="detail-row">
+          <span className="label">Name</span>
+          <span className="value">{formData.name}</span>
+        </div>
+
+        <div className="detail-row">
+          <span className="label">Email</span>
+          <span className="value">{formData.email}</span>
+        </div>
+
+        <div className="detail-row">
+          <span className="label">Date</span>
+          <span className="value">{formData.date}</span>
+        </div>
+
+        <div className="detail-row">
+          <span className="label">Time</span>
+          <span className="value">{formData.time}</span>
+        </div>
+
+        <div className="detail-row">
+          <span className="label">Guests</span>
+          <span className="value">{formData.guests}</span>
+        </div>
+
+        <div className="detail-row">
+          <span className="label">Occasion</span>
+          <span className="value">{formData.occasion || "None"}</span>
+        </div>
       </div>
       <div className="confirmation-buttons">
          <button onClick={() => navigate(-1)}>Edit</button>

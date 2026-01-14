@@ -667,7 +667,115 @@ a {
   color: #666;
   cursor: not-allowed;
 }
+.confirmation {
+  margin: auto;
+}
+.confirmation h2 {
+  text-align: center;
+  font-family: 'Markazi Text', serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+.confirmation-details {
+  border: 2px solid #495E57;
+  border-radius: 12px;
+  padding: 2rem;
+  display: grid;
+  row-gap: 1.25rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
 
+.detail-row {
+  display: grid;
+  grid-template-columns: 0.4fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.label {
+  font-family: 'Karla', sans-serif;
+  font-size: larger;
+  font-weight: 800;
+  color: #495E57;
+  text-align: left;
+}
+
+.value {
+  font-family: 'Karla', sans-serif;
+  font-size: large;
+  color: #333;
+  text-align: right;
+}
+
+.confirmation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.confirmation-buttons button {
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  background-color: #F4CE14;
+  color: #333;
+  border: none;
+  width: 10rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+.confirmation-buttons button:hover {
+  background-color: #495E57;
+  color: white;  
+  border: white 0.1rem solid;   
+  padding:0.9rem; /* slightly smaller padding on hover */ 
+}
+.confirmation-buttons button:active{
+  color: #F4CE14;
+  border-color: #F4CE14;
+}
+.thankyou {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 100%;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 12px;
+  height: 50vh;
+}
+.thankyou h2 {
+  text-align: center;
+  font-family: 'Markazi Text', serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  margin: 0;
+}
+.thankyou p {
+  font-family: 'Karla', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.thankyou span {
+  font-weight: 700;
+  text-decoration: underline;
+}
+.thankyou button{
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  background-color: #F4CE14;
+  color: #333;
+  border: none;
+  width: 15rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
 /* MEDIA QUERIES BEGIN------------------------------------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   .nav{
