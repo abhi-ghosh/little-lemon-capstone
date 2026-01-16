@@ -8,6 +8,7 @@ import ErrorPage from './ErrorPage';
 import BookingForm from './BookingForm';
 import ConfirmBooking from './ConfirmBooking';
 import ThankYou from './ThankYou';
+import Menu from './menu';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 
@@ -25,7 +26,8 @@ const router = createBrowserRouter([
           { index: true, element: <BookingForm /> },
           { path: "confirm", element: <ConfirmBooking /> },
           { path: "thankyou", element: <ThankYou /> }]
-      }
+      },
+      {path: 'menu', element: <Menu />},
     ],
   },
 ]);

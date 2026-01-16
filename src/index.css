@@ -776,6 +776,63 @@ a {
   border-radius: 12px;
   transition: background-color 0.3s ease;
 }
+.menu {
+  max-width: 60%;
+  margin: auto;
+  padding-bottom: 5rem;
+}
+.menu-item-card{
+  display: flex;
+  flex-direction: column;
+  color: black;
+  border: #495E57 0.1rem solid;
+  border-radius: 12px;
+  overflow: hidden;
+  line-height: 1.3rem;
+}
+.menu-item-card h3{
+  font-family: 'Markazi Text', serif;
+  font-size: 2rem;
+  margin: 1rem;
+}
+.menu-item-name {
+  font-family: 'Karla', sans-serif;
+  text-align: left;
+}
+.menu-item-description {
+  font-family: 'Karla', sans-serif;
+  text-align: left;
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  padding-right: 0.5rem;
+  padding-bottom: 1rem;
+  margin: 0;
+}
+.menu-item-details{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.menu-item-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.image-container{
+  width: inherit;
+  height: 10rem;
+  overflow: hidden;
+  border-bottom: #495E57 0.1rem solid;
+}
+.menu-item-image{
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
 /* MEDIA QUERIES BEGIN------------------------------------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   .nav{
