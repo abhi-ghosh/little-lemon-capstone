@@ -16,6 +16,13 @@ import pasta from "./assets/pasta.jpeg";
 import risotto from "./assets/seafood.jpeg";
 import souvlaki from "./assets/souv.jpg";
 import salad from "./assets/greek-salad.jpg";
+import sparkling from "./assets/sparkling.webp";
+import espresso from "./assets/espresso.jpeg";
+import cappuccino from "./assets/cappuccino.jpeg";
+import icedTea from "./assets/icedTea.jpeg";
+import orangeJuice from "./assets/orangeJuice.jpeg";
+import lemonade from "./assets/lemonade.jpeg";
+
 export const menuItems = [
   // 🥗 ENTREES
   {
@@ -184,5 +191,61 @@ export const menuItems = [
   price: 5.99,
   calories: 360,
   image: affogato,
+  },
+
+  // 🍹 DRINKS
+  {
+    id: "drink-1",
+    name: "Fresh Lemonade",
+    description: "House-made lemonade with fresh lemons and mint.",
+    category: "drink",
+    price: 3.99,
+    calories: 120,
+    image: lemonade, // import when ready
+  },
+  {
+    id: "drink-2",
+    name: "Iced Tea",
+    description: "Chilled black tea lightly sweetened with lemon.",
+    category: "drink",
+    price: 3.49,
+    calories: 90,
+    image: icedTea,
+  },
+  {
+    id: "drink-3",
+    name: "Sparkling Water",
+    description: "Refreshing sparkling mineral water.",
+    category: "drink",
+    price: 2.99,
+    calories: 0,
+    image: sparkling,
+  },
+  {
+    id: "drink-4",
+    name: "Espresso",
+    description: "Rich single-shot espresso made from premium beans.",
+    category: "drink",
+    price: 2.49,
+    calories: 5,
+    image: espresso,
+  },
+  {
+    id: "drink-5",
+    name: "Cappuccino",
+    description: "Espresso with steamed milk and velvety foam.",
+    category: "drink",
+    price: 4.49,
+    calories: 140,
+    image: cappuccino,
+  },
+  {
+    id: "drink-6",
+    name: "Orange Juice",
+    description: "Freshly squeezed orange juice.",
+    category: "drink",
+    price: 3.99,
+    calories: 160,
+    image: orangeJuice,
   }
 ];

@@ -781,14 +781,99 @@ a {
   margin: auto;
   padding-bottom: 5rem;
 }
+.title-and-filters {
+  display: flex;
+  flex-direction: row;
+  align-items: top;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+.title-and-filters>h1{
+  font-family: 'Markazi Text', serif;
+  font-size: 4rem;
+  margin: 0;
+  padding: 0;
+}
+.menu-container > h2{
+  display: flex;
+  align-items: center;
+  font-family: 'Markazi Text', serif;
+  font-size: 3.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}
+/* dotted line after h2 */
+.menu-container > h2::after {
+  content: "";
+  flex: 1;
+  margin-left: 1rem;
+  border-bottom: 2px dotted black;
+}
+.sort_buttons {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.4rem;
+}
+.sort-container>select{
+  width: 100%;
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+.display-buttons {
+  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem 0.5rem;
+  margin-top: 1rem;
+}
+.display-buttons>button{
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  background-color: #495E57;
+  color: white;
+  border: none;
+  padding: 0.6rem 0.8rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 6px;
+  border: #495E57 0.1rem solid;
+  transition: background-color 0.3s ease;
+  
+}
+.display-buttons>button:hover {
+  opacity: 0.8;
+}
+.display-buttons>button:active{
+  scale: 0.95;
+}
+.display-buttons > button.button-pressed {
+  color: #495E57;
+  background-color: white;
+  border: #495E57 0.1rem solid;
+}
+.menu-item-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
 .menu-item-card{
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   color: black;
   border: #495E57 0.1rem solid;
   border-radius: 12px;
   overflow: hidden;
   line-height: 1.3rem;
+}
+.menu-item-card:hover {
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  transform: translateY(-5px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .menu-item-card h3{
   font-family: 'Markazi Text', serif;
@@ -802,7 +887,7 @@ a {
 .menu-item-description {
   font-family: 'Karla', sans-serif;
   text-align: left;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding-left: 1rem;
   padding-right: 0.5rem;
   padding-bottom: 1rem;
@@ -817,11 +902,6 @@ a {
   padding-right: 1rem;
 }
 
-.menu-item-grid{
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
 .image-container{
   width: inherit;
   height: 10rem;
