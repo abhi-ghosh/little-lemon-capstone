@@ -5,11 +5,14 @@ export default function MenuCard({ item }) {
       <div className="image-container">
         <img className="menu-item-image" src={item.image} alt={item.name} />
       </div>
-      <h3 className='menu-item-name'>{item.name}</h3>
+      <div className='nameandprice'>
+        <h3>{item.name}</h3>
+        <p>${item.price.toFixed(2)}</p>
+      </div>
       <p className='menu-item-description'>{item.description}</p>
       <div className="menu-item-details">
-        <p>${item.price.toFixed(2)}</p>
         <p>{item.calories} cal</p>
+        <button className="add-to-order-button">Add to Order</button>
       </div>
     </div>
   );
