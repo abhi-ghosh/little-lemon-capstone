@@ -63,6 +63,7 @@ a {
   transition: width 0.3s ease;
 }
 
+
 .nav-links a:hover::after {
   width: 100%; /* expand underline to full width */
 }
@@ -883,7 +884,7 @@ a {
 .menu-item-image{
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: cover;
 }
 .menu-item-card h3{
   font-family: 'Markazi Text', serif;
@@ -945,7 +946,9 @@ a {
 .add-to-order-button:active{
   scale: 0.95;
 }
-
+.mobile-bottom-bar {
+  display: none;
+}
 /* MEDIA QUERIES BEGIN------------------------------------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   .nav{
@@ -1207,6 +1210,110 @@ a {
 }
 .form-row{
   grid-template-columns: 1fr;
+}
+.sort_buttons {
+  display:none;
+}
+.menu {
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.title-and-filters>h1{
+  font-size: 3.2rem;
+
+}
+.menu-container > h2{
+  font-size: 2.5rem;
+}
+.menu-item-grid{
+  grid-template-columns: repeat(1, 1fr);
+}
+.nameandprice>p{
+  font-size: 1.5rem;
+}
+.nameandprice>h3{
+  font-size: 2rem;
+}
+.add-to-order-button {
+  width: 60%;
+  font-size: 1.2rem;
+}
+.mobile-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: white;
+  border-top: 1px solid #ddd;
+  z-index: 10;
+  box-shadow: #333 0 -2px 10px;
+}
+.mobile-bottom-bar button {
+  font-family: karla, sans-serif;
+  width: 45%;
+  height: 3rem;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 8px;
+  background-color:  #495E57;
+  color: white;
+  cursor: pointer;
+}
+.sheet {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background: white;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  gap: 3rem;
+  z-index: 20;
+}
+.sheet>h2{
+  font-family: markazi, serif;
+  font-size:2.5rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.sheet>label{
+  font-family: karla;
+  font-size:1.2rem;
+  font-weight: 700;
+  color: #333;
+}
+.sheet>button{
+  width: 100%;
+  height: 3rem;
+  font-family: karla;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #333;
+  background-color: #F4CE14;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
 }
 }
 

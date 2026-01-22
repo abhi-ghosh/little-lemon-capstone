@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { menuItems } from "./menuData";
 import MenuCard from "./menuCard";
 
@@ -9,12 +9,31 @@ export default function Menu() {
     desserts: true,
     drinks: true,
   });
+  const [showSortSheet, setShowSortSheet] = useState(false);
+  const [showFilterSheet, setShowFilterSheet] = useState(false);
   const toggleButton = (category) => {
     setButtonActive((prevState) => ({
       ...prevState,
       [category]: !prevState[category],
     }));
+  };
+    // Sort Option shows on button for mobile resolution
+const getSortLabel = (sortOption) => {
+  switch (sortOption) {
+    case "lowToHigh":
+      return "Price ☝️";
+    case "highToLow":
+      return "Price 👇";
+    case "caloriesLowToHigh":
+      return "Calories ☝️";
+    case "caloriesHighToLow":
+      return "Calories 👇";
+    case "alphabetical":
+      return "A–Z";
+    default:
+      return "Default";
   }
+};
   const [sortOption, setSortOption] = useState("default");
   const sortedMenuItems = [...menuItems].sort((a, b) => {
     switch (sortOption) {
@@ -32,6 +51,19 @@ export default function Menu() {
         return 0;
     }
   });
+  // Prevents user from scrolling while modal is open
+  useEffect(() => {
+    if (showSortSheet || showFilterSheet) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [showSortSheet, showFilterSheet]);
+
 
   return (
     <div className="menu">
@@ -56,6 +88,74 @@ export default function Menu() {
           </div>
         </div>
       </div>
+      <div className="mobile-bottom-bar">
+        <button onClick={() => setShowSortSheet(prev => !prev)}>Sort - {getSortLabel(sortOption)}</button>
+        <button onClick={() => setShowFilterSheet(prev => !prev)}>Filter</button>
+      </div>
+      {/* Sort Sheet for mobile */}
+      {showSortSheet && (
+        <div className='sheet'>
+          <h2>Sort by</h2>
+          <label>
+            <input type="radio" value="default" checked={sortOption === "default"} onChange={(e) => setSortOption(e.target.value)} />
+            Default
+          </label>
+          <label>
+            <input type="radio" value="alphabetical" checked={sortOption === "alphabetical"} onChange={(e) => setSortOption(e.target.value)} />
+            Name (A-Z)
+          </label>
+          <label>
+            <input type="radio" value="lowToHigh" checked={sortOption === "lowToHigh"} onChange={(e) => setSortOption(e.target.value)} />
+            Price Low to High
+          </label>
+          <label>
+            <input type="radio" value="highToLow" checked={sortOption === "highToLow"} onChange={(e) => setSortOption(e.target.value)} />
+            Price High to Low
+          </label>
+          <label>
+            <input type="radio" value="caloriesLowToHigh" checked={sortOption === "caloriesLowToHigh"} onChange={(e) => setSortOption(e.target.value)} />
+            Calories Low to High
+          </label>
+          <label>
+            <input type="radio" value="caloriesHighToLow" checked={sortOption === "caloriesHighToLow"} onChange={(e) => setSortOption(e.target.value)} />
+            Calories High to Low
+          </label>
+          <button onClick={() => setShowSortSheet(false)}>OK 👍</button>
+        </div>
+      )}
+      {/*Blur for backdrop when sort menu is open on moblie*/}
+      {(showFilterSheet || showSortSheet) && (
+      <div
+        className="backdrop"
+        onClick={() => {
+          setShowFilterSheet(false);
+          setShowSortSheet(false);
+        }}
+      />
+      )}
+      {/* Filter Sheet for mobile */}
+      {showFilterSheet && (
+        <div className='sheet'>
+          <h2>Filter Categories</h2>
+          <label>
+            <input type="checkbox" checked={buttonActive.entrees} onChange={() => toggleButton("entrees")} />
+            Entrees
+          </label>
+          <label>
+            <input type="checkbox" checked={buttonActive.mains} onChange={() => toggleButton("mains")} />
+            Main Course
+          </label>
+          <label>
+            <input type="checkbox" checked={buttonActive.desserts} onChange={() => toggleButton("desserts")} />
+            Desserts
+          </label>
+          <label>
+            <input type="checkbox" checked={buttonActive.drinks} onChange={() => toggleButton("drinks")} />
+            Drinks
+          </label>
+          <button onClick={() => setShowFilterSheet(false)}>OK 👍</button>
+        </div>
+      )}
       <div className="menu-container">
         <h2>Entrees</h2>
         {buttonActive.entrees && <div className = "menu-item-grid">
