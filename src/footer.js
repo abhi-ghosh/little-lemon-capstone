@@ -1,14 +1,13 @@
-import React from 'react';
+import React, {forwardRef } from 'react';
 import pin from './assets/pin.png';
 import phone from './assets/phone.png';
 import mail from './assets/mail.png';
 import {footerLinks} from './link-content';
 import Links from './links';
 import verticalLogo from './assets/lemon-vertical.png';
-export default function Footer() {
+const Footer = forwardRef((props, ref) => {
   return (
-    <>
-      <footer className = "footer-container">
+      <footer ref={ref} className = "footer-container">
         <div className='footer-content'>
           <img className='footer-logo' src={verticalLogo} alt= "Little Lemon Logo" />
           <div className='contact'>
@@ -25,8 +24,6 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-
-    </>
-
   );
-}
+});
+export default Footer;

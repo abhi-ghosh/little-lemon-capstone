@@ -4,7 +4,7 @@ import x from './assets/x.png';
 
 export const navLinks = [
   { name: 'Home', path: '/' },
-  { name: 'About', path: '#' },
+  { name: 'About', path: '/about' },
   { name: 'Menu', path: '/menu' },
   { name: 'Reservations', path: '/reservations' },
   { name: 'Order Online', path: '#' },

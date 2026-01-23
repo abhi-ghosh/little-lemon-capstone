@@ -54,10 +54,11 @@ useEffect(() => {
           <span></span>
         </div>
 
-        {/* Add conditional class here */}
+        {/* Conditional class to show/hide nav links */}
         <Links
           className={`nav-links ${isOpen ? "active" : ""}`}
           links={navLinks}
+          linkClick = {()=>setIsOpen(false)}
         />
       </div>
     </nav>

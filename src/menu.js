@@ -1,8 +1,28 @@
 import { useState, useEffect } from "react";
+import { useOutletContext } from "react-router";
 import { menuItems } from "./menuData";
 import MenuCard from "./menuCard";
 
 export default function Menu() {
+  // Stick the Sort and Filter buttons on top of the Footer when Footer is visibile on mobile
+  const {footerRef} = useOutletContext();
+  const [footerVisible, setFooterVisible] = useState(false);
+
+  useEffect(() => {
+  if (!footerRef?.current) return;
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      setFooterVisible(entry.isIntersecting);
+    },
+    { threshold: 0 }
+  );
+
+  observer.observe(footerRef.current);
+
+  return () => observer.disconnect();
+}, []);
+
   const [buttonActive, setButtonActive] = useState({
     entrees: true,
     mains: true,
@@ -17,23 +37,23 @@ export default function Menu() {
       [category]: !prevState[category],
     }));
   };
-    // Sort Option shows on button for mobile resolution
-const getSortLabel = (sortOption) => {
-  switch (sortOption) {
-    case "lowToHigh":
-      return "Price ☝️";
-    case "highToLow":
-      return "Price 👇";
-    case "caloriesLowToHigh":
-      return "Calories ☝️";
-    case "caloriesHighToLow":
-      return "Calories 👇";
-    case "alphabetical":
-      return "A–Z";
-    default:
-      return "Default";
-  }
-};
+  // Sort Option shows on button for mobile resolution
+  const getSortLabel = (sortOption) => {
+    switch (sortOption) {
+      case "lowToHigh":
+        return "Price ☝️";
+      case "highToLow":
+        return "Price 👇";
+      case "caloriesLowToHigh":
+        return "Calories ☝️";
+      case "caloriesHighToLow":
+        return "Calories 👇";
+      case "alphabetical":
+        return "A–Z";
+      default:
+        return "Default";
+    }
+  };
   const [sortOption, setSortOption] = useState("default");
   const sortedMenuItems = [...menuItems].sort((a, b) => {
     switch (sortOption) {
@@ -87,10 +107,6 @@ const getSortLabel = (sortOption) => {
               <button className={buttonActive.drinks ? "" : "button-pressed"} onClick={() => toggleButton("drinks")}>Drinks</button>
           </div>
         </div>
-      </div>
-      <div className="mobile-bottom-bar">
-        <button onClick={() => setShowSortSheet(prev => !prev)}>Sort - {getSortLabel(sortOption)}</button>
-        <button onClick={() => setShowFilterSheet(prev => !prev)}>Filter</button>
       </div>
       {/* Sort Sheet for mobile */}
       {showSortSheet && (
@@ -183,6 +199,11 @@ const getSortLabel = (sortOption) => {
           <MenuCard key={item.id} item={item} />
         ))}
         </div>}
+      </div>
+      {/* Mobile bottom bar */}
+       <div className= {`mobile-bottom-bar ${footerVisible ? "static" : "fixed"}`}>
+        <button onClick={() => setShowSortSheet(prev => !prev)}>Sort - {getSortLabel(sortOption)}</button>
+        <button onClick={() => setShowFilterSheet(prev => !prev)}>Filter</button>
       </div>
     </div>
   );

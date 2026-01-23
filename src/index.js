@@ -9,6 +9,7 @@ import BookingForm from './BookingForm';
 import ConfirmBooking from './ConfirmBooking';
 import ThankYou from './ThankYou';
 import Menu from './menu';
+import AboutSection from './aboutSection';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
           { path: "thankyou", element: <ThankYou /> }]
       },
       {path: 'menu', element: <Menu />},
+      {path: 'about', element: <AboutSection />},
     ],
   },
 ]);

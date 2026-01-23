@@ -958,6 +958,9 @@ a {
     justify-content: space-between;
     padding: 1rem;
  }
+ .nav>a{
+  margin: 0;
+ }
   .hamburger {
     width: 30px;
     height: 20px;
@@ -1047,7 +1050,6 @@ a {
   }
   .hero-text-button{
     position: relative;
-    /* background-color: red; */
     width: 100%;
     margin: 0;
     padding: 1rem;
@@ -1239,7 +1241,7 @@ a {
   width: 60%;
   font-size: 1.2rem;
 }
-.mobile-bottom-bar {
+.mobile-bottom-bar.fixed {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -1251,6 +1253,18 @@ a {
   border-top: 1px solid #ddd;
   z-index: 10;
   box-shadow: #333 0 -2px 10px;
+}
+.mobile-bottom-bar.static {
+  position: static;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  background: white;
+  z-index: 10;
 }
 .mobile-bottom-bar button {
   font-family: karla, sans-serif;
