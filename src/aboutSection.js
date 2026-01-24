@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router";
+import restaurant from "./assets/restaurant.jpg";
+import chefs from "./assets/Mario and Adrian A.jpg";
+import menu from "./assets/collage.jpg";
 export default function AboutSection() {
   return (
     <div className="about-section">
@@ -15,7 +18,7 @@ export default function AboutSection() {
           </p>
         </div>
         <div className="about-image">
-          <img src="/" alt="Little Lemon History"/>
+          <img src= {restaurant} alt="Little Lemon History"/>
         </div>
       </div>
       <div className="about-container">
@@ -31,7 +34,7 @@ export default function AboutSection() {
           </p>
         </div>
         <div className="chefs-image">
-          <img src="/" alt="Little Lemon Chefs"/>
+          <img src={chefs} alt="Little Lemon Chefs"/>
         </div>
       </div>
       <div className="about-container">
@@ -47,7 +50,7 @@ export default function AboutSection() {
           </p>
         </div>
         <div className="about-image">
-          <img src="/" alt="Little Lemon History"/>
+          <img src={menu} alt="Menu pic"/>
         </div>
       </div>
     </div>

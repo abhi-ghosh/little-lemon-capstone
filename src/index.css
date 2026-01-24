@@ -63,9 +63,15 @@ a {
   transition: width 0.3s ease;
 }
 
-
 .nav-links a:hover::after {
   width: 100%; /* expand underline to full width */
+}
+.nav-link {
+  position: relative;
+}
+
+.nav-link.active::after {
+  width: 100%;
 }
 .nav>img {
   max-height: 50px;
@@ -949,6 +955,91 @@ a {
 .mobile-bottom-bar {
   display: none;
 }
+.about-section {
+  max-width: 60%;
+  margin: auto;
+  padding: 4rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+}
+
+
+.about-container:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+
+.about-text {
+  flex: 1;
+  text-align: left;
+}
+
+.about-text h1 {
+  font-family: "Markazi Text", serif;
+  font-size: 3.5rem;
+  margin: 0 0 1rem 0;
+  color: #495E57;
+}
+
+.about-text p {
+  font-family: "Karla", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 32rem;
+}
+
+
+.about-text a {
+  margin-left: 0.3rem;
+  font-weight: 700;
+  color: #495E57;
+  text-decoration: none;
+  position: relative;
+}
+
+.about-text a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: #495E57;
+  transition: width 0.3s ease;
+}
+
+.about-text a:hover::after {
+  width: 100%;
+}
+
+
+.about-image,
+.chefs-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image img,
+.chefs-image img {
+  width: 100%;
+  max-width: 28rem;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
 /* MEDIA QUERIES BEGIN------------------------------------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   .nav{
@@ -1065,12 +1156,12 @@ a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.4); /* dark overlay */
+    background: rgba(0,0,0,0.4);
     z-index: 0;
 }
 .hero-text-button > * {
     position: relative;
-    z-index: 1; /* keep text above overlay */
+    z-index: 1; 
 }
   .hero img {
     display: none;
@@ -1088,7 +1179,7 @@ a {
   background-color: #495E57;
   color: white;
   border: white 0.1rem solid;
-  padding:0.9rem; /* slightly smaller padding on hover */
+  padding:0.9rem; 
 }
 .reserve-button:active{
   color: #F4CE14;
@@ -1096,21 +1187,21 @@ a {
 }
 .specials-section {
   margin: 0;
-  padding:1rem; /* space for overlapping image */
+  padding:1rem;
   display: flex;
   flex-direction: column;
-  max-width: 100%; /* boxed width */
-  gap: 1.5rem; /* spacing between all items */
-  align-items: start; /* makes things align nicely at the top */
+  max-width: 100%;
+  gap: 1.5rem;
+  align-items: start; 
 }
 .specials-header {
   display: flex;
   flex-direction: column;
-  align-items: center; /* centers children horizontally */
+  align-items: center; 
   text-align: center;
   width: 100%;
 }
-/* Place header and button on the first row */
+
 .specials-header > h2 {
   font-size: 50px;
   font-family: 'Markazi Text', serif;
@@ -1171,8 +1262,8 @@ a {
   height: auto;
   background-image: linear-gradient(rgba(35, 35, 35, 0.5), rgba(31, 31, 31, 0.5)), url('./assets/Mario and Adrian A.jpg');
   filter: grayscale(100%);
-  background-size: cover;       /* fills the container */
-  background-position: center top;  /* centers the image */
+  background-size: cover;
+  background-position: center top;
   background-repeat: no-repeat;
 }
 .about-left {
@@ -1328,6 +1419,35 @@ a {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 10;
+}
+.about-section {
+  max-width: 100%;
+  padding: 2rem 1rem;
+  gap: 3rem;
+}
+
+.about-container {
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* remove alternating on mobile */
+.about-container:nth-child(even) {
+  flex-direction: column;
+}
+
+.about-text h1 {
+  font-size: 2.8rem;
+}
+
+.about-text p {
+  max-width: 100%;
+  font-size: 1.05rem;
+}
+
+.about-image img,
+.chefs-image img {
+  max-width: 100%;
 }
 }
 

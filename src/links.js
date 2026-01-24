@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router';
+import {NavLink as Link} from 'react-router';
 export default function Links({linkClick, className = "", links = [], imageOnly }) {
   return (
     <ul className={className}>
@@ -8,6 +8,9 @@ export default function Links({linkClick, className = "", links = [], imageOnly 
           <Link
             to = {link.path}
             onClick={linkClick}
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
           >
             {imageOnly ? (
               <img className='social-logo' src={link.logo} alt={link.name} />
