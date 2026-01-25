@@ -1,4 +1,8 @@
 
+html{
+  scroll-behavior: smooth;
+  height: 100%;
+}
 body {
   margin: 0;
   padding:0;
@@ -8,13 +12,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
+.page-content {
+  flex: 1;          /* THIS stretches */
+  display: block;   /* children behave normally */
+}
 /* Hamburger hidden on desktop */
 .hamburger {
   display: none;
@@ -41,6 +55,7 @@ code {
 a {
   text-decoration: none;
 }
+
 .nav-links a {
   margin-left: 1rem;
   position: relative;
@@ -867,6 +882,7 @@ a {
 }
 
 .menu-item-card{
+  height: 25rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -952,6 +968,69 @@ a {
 .add-to-order-button:active{
   scale: 0.95;
 }
+.added-to-order{
+  display: flex;
+  flex-direction: column;
+}
+.trio {
+  font-family: karla, sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  padding-bottom: 0.7rem;
+}
+.trio>button {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  background-color: #F4CE14;
+  color: #333;
+  border: black 0.1rem solid;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  transition: scale 0.1s ease-in-out;
+}
+.trio>button:hover {
+  opacity: 0.8;
+}
+.trio>button:active{
+  scale: 0.95;
+}
+.quantity{
+  font-size: 1.2rem;
+  margin: 0;
+  margin-left: 0.8rem;
+  margin-right: 0.8rem;
+  font-weight: 700;
+}
+.rem{
+  width: 8.4rem;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  background-color: #ff7c40;
+  color: black;
+  border: black 0.1rem solid;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+}
+.rem:hover {
+  opacity: 0.8;
+}
+.rem:active{
+  scale: 0.95;
+}
+
 .mobile-bottom-bar {
   display: none;
 }
@@ -1029,6 +1108,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: #495E57 0.1rem solid;
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .about-image img,
@@ -1037,8 +1119,206 @@ a {
   max-width: 28rem;
   height: 20rem;
   object-fit: cover;
-  border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.order-online {
+  padding: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.empty-cart  a {
+  font-weight: 700;
+  color: #495E57;
+  text-decoration: none;
+  position: relative;
+}
+.empty-cart a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  transform: translateX(-50%);
+  width: 0%;
+  height: 2px;
+  background-color: #495E57;
+  transition: width 0.3s ease;
+}
+.empty-cart a:hover::after {
+  width: 100%;
+}
+.cart {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  border: #3d514a 0.1rem solid;
+}
+
+.cart-header h1 {
+  font-family: Markazi Text, serif;
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 3.5rem;
+  color: #3d514a;
+}
+
+
+.cart p {
+  color: #555;
+}
+
+
+.cart-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-items li + li {
+  border-top: 1px solid #eee;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.cart-item-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+};
+
+.cart-item-info h2 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.cart-item-info p {
+  margin: 0.25rem 0 0;
+  font-weight: 600;
+}
+
+
+.cart-item-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-item-controls span {
+  min-width: 24px;
+  text-align: center;
+  font-weight: 600;
+}
+
+
+.cart-item-controls button {
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.cart-item-controls button:hover {
+  background: #f0f0f0;
+}
+
+.cart-item-controls button:active {
+  transform: scale(0.96);
+}
+
+
+.cart-item-controls button:last-child {
+  background: transparent;
+  color: #c0392b;
+  border: none;
+  font-weight: 600;
+}
+
+.cart-item-controls button:last-child:hover {
+  text-decoration: underline;
+}
+
+
+.cart-footer {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cart-summary p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.cart-actions{
+  display: flex;
+  gap: 1rem;
+}
+.checkout-button {
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  background: #495e57; /* Little Lemon vibe */
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.checkout-button:hover {
+  opacity: 0.6;
+}
+.checkout-button:hover {
+  background: #3d514a;
+}
+
+.checkout-button:active {
+  transform: scale(0.97);
+}
+.shopping-cart{
+  cursor: pointer;
+  display: flex;
+  justify-content:space-evenly ;
+  width: 10rem;
+  position: fixed;
+  background: white;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  right: 0;
+  bottom: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.1s ease-in-out;
+}
+.shopping-cart:hover{
+  opacity: 0.7;
+}
+.shopping-cart:active{
+  transform: scale(0.97);
+}
+.shopping-cart>img{
+  width: 4rem;
+  height: auto;
+  object-fit: cover;
+}
+.shopping-cart>p{
+  font-family: 'Karla', serif;
+  margin: 0;
+  font-weight: 600;
+  font-size: 3rem;
+  color: #3d514a;
 }
 /* MEDIA QUERIES BEGIN------------------------------------------------------------------------------------------------------- */
 @media (max-width: 768px) {
@@ -1205,7 +1485,6 @@ a {
 .specials-header > h2 {
   font-size: 50px;
   font-family: 'Markazi Text', serif;
-        /* reset browser default */
 }
 
 .specials-header > button {
@@ -1332,6 +1611,19 @@ a {
   width: 60%;
   font-size: 1.2rem;
 }
+.added-to-order{
+  flex-direction: row;
+  gap: 0.5rem;
+  height: 2.8rem;
+}
+.trio{
+  height: 100%;
+  padding: 0;
+}
+.trio button{
+  height: inherit;
+}
+
 .mobile-bottom-bar.fixed {
   position: fixed;
   bottom: 0;
@@ -1448,6 +1740,94 @@ a {
 .about-image img,
 .chefs-image img {
   max-width: 100%;
+}
+.order-online {
+    padding: 1rem;
+  }
+
+  .cart {
+    padding: 1rem;
+    border-radius: 10px;
+  }
+
+  .cart-header h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .cart-items li + li {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+  }
+
+  .cart-item {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.75rem;
+  }
+.cart-item-info {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+  .cart-item-info h2 {
+    font-size: 1.2rem;
+  }
+.cart-item-controls>button:last-child {
+  padding:0;
+}
+  .cart-item-info p {
+    font-size: 1.2rem;
+  }
+
+  .cart-item-controls {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .cart-item-controls button {
+    padding: 0.6rem 0.8rem;
+    font-size: 1rem;
+  }
+
+  .cart-item-controls span {
+    font-size: 1.1rem;
+    min-width: 32px;
+  }
+
+  .cart-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .cart-summary p {
+    text-align: center;
+    font-size: 1.2rem;
+  }
+
+  .cart-actions {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .checkout-button {
+    width: 100%;
+    font-size: 1.1rem;
+    padding: 0.9rem;
+  }
+.shopping-cart{
+  width: 7rem;
+  right: 50%;
+  transform: translateX(50%);
+  bottom:5.5rem;
+}
+.shopping-cart>img{
+  width: 2rem;
+}
+.shopping-cart>p{
+  font-size: 1.5rem;
 }
 }
 

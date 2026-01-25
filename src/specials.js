@@ -1,6 +1,6 @@
 import React from 'react';
 import {specials} from './specials-data';
-import { Link, useNavigate } from 'react-router';
+import {useNavigate } from 'react-router';
 import SpecialsCard from './specials-card';
 export default function Specials() {
   const navigate = useNavigate();
@@ -8,7 +8,7 @@ export default function Specials() {
     <section className="specials-section">
       <div className='specials-header'>
         <h2>This weeks specials!</h2>
-        <button onClick={()=> navigate("/menu")}>Online Menu</button>
+        <button onClick={()=> navigate("/menu") && window.scrollTo(0, 0)}>Online Menu</button>
       </div>
         {specials.map((special, index) => {
           return (

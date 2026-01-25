@@ -46,7 +46,7 @@ export default function AboutSection() {
             From timeless favorites to chef-inspired specialties, 
             each dish is made to be enjoyed and remembered. 
             Want to explore everything we offer? Head over to our 
-            <Link to="/menu"> Online Menu</Link> to see the full selection.
+            <Link onClick={() => window.scrollTo(0, 0)} to="/menu"> Online Menu</Link> to see the full selection.
           </p>
         </div>
         <div className="about-image">

@@ -1,9 +1,9 @@
 import React from 'react';
 import Nav from './nav';
-export default function Header() {
+export default function Header({cartCount}) {
   return (
     <header>
-      <Nav/>
+      <Nav cartCount={cartCount}/>
     </header>
   );
 }

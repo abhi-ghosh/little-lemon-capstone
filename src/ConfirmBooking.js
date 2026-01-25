@@ -39,8 +39,8 @@ export default function ConfirmBooking() {
         </div>
       </div>
       <div className="confirmation-buttons">
-         <button onClick={() => navigate(-1)}>Edit</button>
-         <button onClick={() => navigate("../thankyou")}>Submit</button>
+         <button onClick={() => navigate(-1) && window.scrollTo(0, 0)}>Edit</button>
+         <button onClick={() => navigate("../thankyou") && window.scrollTo(0, 0)}>Submit</button>
       </div>
     </div>
   );

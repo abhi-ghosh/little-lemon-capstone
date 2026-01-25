@@ -11,7 +11,7 @@ export default function Hero() {
             <h3>Chicago</h3>
           </div>
           <p>We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.</p>
-          <Link to="/reservations"><button className="reserve-button">Reserve a Table</button></Link>
+          <Link onClick={()=> window.scrollTo(0, 0)} to="/reservations"><button className="reserve-button">Reserve a Table</button></Link>
         </div>
         <div>
           <img src={hero} alt="Little Lemon Restaurant" />

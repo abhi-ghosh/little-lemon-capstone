@@ -10,7 +10,7 @@ export default function ThankYou() {
         <p>We look forward to serving you.</p>
         <p>A confirmation email has been sent to <span>{formData.email}</span></p>
       </div>
-      <Link to="/"><button>Back to Home</button></Link>
+      <Link onClick={()=>window.scrollTo(0, 0)} to="/"><button>Back to Home</button></Link>
     </div>
   );
 }

@@ -166,7 +166,7 @@ export default function BookingForm() {
           className="primary-btn"
           disabled={!isFormValid}
           type="button"
-          onClick={() => navigate("confirm")}
+          onClick={() => navigate("confirm")&& window.scrollTo(0, 0)}
         >
           Next
         </button>

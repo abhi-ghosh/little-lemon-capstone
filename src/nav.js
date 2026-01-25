@@ -3,7 +3,7 @@ import {navLinks} from './link-content';
 import Links from './links';
 import logo from './assets/logo.png';
 import { Link } from 'react-router';
-export default function Nav() {
+export default function Nav({cartCount}) {
   const [isOpen, setIsOpen] = useState(false);
   const click = () => {
     isOpen?console.log("Menu Closed"):console.log("Menu Opened");

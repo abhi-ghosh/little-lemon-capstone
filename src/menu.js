@@ -1,11 +1,23 @@
-import { useState, useEffect } from "react";
-import { useOutletContext } from "react-router";
+import { useState, useEffect, use } from "react";
+import { useOutletContext, useNavigate } from "react-router";
 import { menuItems } from "./menuData";
 import MenuCard from "./menuCard";
+import shopping_cart from "./assets/cart.svg";
 
 export default function Menu() {
+  const nav = useNavigate();
   // Stick the Sort and Filter buttons on top of the Footer when Footer is visibile on mobile
-  const {footerRef} = useOutletContext();
+  const {footerRef,cart,cartCount,cartPrice, setCart, addToCart, removeFromCart, increaseQuantity, decreaseQuantity} = useOutletContext();
+  const cartData = {
+    cart,
+    cartCount,
+    cartPrice,
+    addToCart,
+    setCart,
+    removeFromCart,
+    increaseQuantity,
+    decreaseQuantity,
+  };
   const [footerVisible, setFooterVisible] = useState(false);
 
   useEffect(() => {
@@ -176,27 +188,27 @@ export default function Menu() {
         <h2>Entrees</h2>
         {buttonActive.entrees && <div className = "menu-item-grid">
            {(sortedMenuItems.filter(item => item.category === "entree")).map(item => (
-              <MenuCard key={item.id} item={item} />
+              <MenuCard key={item.id} item={item} cartData={cartData} />
           ))}
         </div>}
 
         <h2>Main Course</h2>
         {buttonActive.mains && <div className = "menu-item-grid">
           {(sortedMenuItems.filter(item => item.category === "main")).map(item => (
-          <MenuCard key={item.id} item={item} />
+          <MenuCard key={item.id} item={item} cartData={cartData} />
           ))}
         </div>}
 
         <h2>Desserts</h2>
         {buttonActive.desserts && <div className = "menu-item-grid">
           {(sortedMenuItems.filter(item => item.category === "dessert")).map(item => (
-          <MenuCard key={item.id} item={item} />
+          <MenuCard key={item.id} item={item} cartData={cartData} />
         ))}
         </div>}
         <h2>Drinks</h2>
         {buttonActive.drinks && <div className = "menu-item-grid">
           {(sortedMenuItems.filter(item => item.category === "drink")).map(item => (
-          <MenuCard key={item.id} item={item} />
+          <MenuCard key={item.id} item={item} cartData={cartData} />
         ))}
         </div>}
       </div>
@@ -204,7 +216,10 @@ export default function Menu() {
        <div className= {`mobile-bottom-bar ${footerVisible ? "static" : "fixed"}`}>
         <button onClick={() => setShowSortSheet(prev => !prev)}>Sort - {getSortLabel(sortOption)}</button>
         <button onClick={() => setShowFilterSheet(prev => !prev)}>Filter</button>
-      </div>
+       </div>
+        <div>
+          {cartData.cart.length > 0 && (<button className={`shopping-cart ${cartData.cart.length > 0 ? "show" : ""}`} onClick={() => nav("/orderOnline") && window.scrollTo(0, 0)}><img src={shopping_cart} alt="shopping cart" /> <p>{cartData.cartCount}</p></button>)}
+       </div>
     </div>
   );
 }

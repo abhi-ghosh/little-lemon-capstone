@@ -7,7 +7,7 @@ export const navLinks = [
   { name: 'About', path: '/about' },
   { name: 'Menu', path: '/menu' },
   { name: 'Reservations', path: '/reservations' },
-  { name: 'Order Online', path: '#' },
+  { name: 'Order Online', path: '/orderOnline' },
   { name: 'Login', path: '#' }
 ]
 export const footerLinks = [
