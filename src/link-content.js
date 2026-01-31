@@ -8,7 +8,7 @@ export const navLinks = [
   { name: 'Menu', path: '/menu' },
   { name: 'Reservations', path: '/reservations' },
   { name: 'Order Online', path: '/orderOnline' },
-  { name: 'Login', path: '#' }
+  { name: 'Login', path: '/login' }
 ]
 export const footerLinks = [
   {logo: insta, name: 'Instagram', path: 'https://www.instagram.com' },

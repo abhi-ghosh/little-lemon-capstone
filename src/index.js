@@ -12,6 +12,7 @@ import Menu from './menu';
 import AboutSection from './aboutSection';
 import reportWebVitals from './reportWebVitals';
 import OrderOnline from './orderOnline';
+import Login from './Login';
 import { createBrowserRouter, RouterProvider } from 'react-router';
 
 const router = createBrowserRouter([
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
       {path: 'menu', element: <Menu />},
       {path: 'about', element: <AboutSection />},
       {path:'orderOnline', element: <OrderOnline />},
+      {path:'login', element: <Login />}
     ],
   },
 ]);

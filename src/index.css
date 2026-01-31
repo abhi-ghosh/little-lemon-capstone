@@ -1124,7 +1124,7 @@ a {
 
 .order-online {
   padding: 1.5rem;
-  max-width: 900px;
+  max-width: 60%;
   margin: 0 auto;
 }
 .empty-cart  a {
@@ -1319,6 +1319,126 @@ a {
   font-weight: 600;
   font-size: 3rem;
   color: #3d514a;
+}
+.loginform{
+  font-family: karla, sans-serif;
+  box-sizing: border-box;
+  padding: 2rem;
+  width: 60%;
+  margin: auto;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  border-radius: 12px;
+  border: #3d514a 1px solid;
+}
+.loginform p{
+  margin: 0;
+  text-align: center;
+  font-family: karla, serif;
+  font-size: 1.3rem;
+  color: #3d514a;
+}
+.loginform p a{
+  color: #3d514a;
+  font-weight: 700;
+  position: relative;
+}
+.loginform p a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -2px;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: #3d514a;
+  transition: width 0.3s ease-in-out;
+}
+
+.loginform p a:hover::after {
+  width: 100%;
+}
+.emailcontainer, .passwordcontainer{
+  position: relative;
+}
+.loginform span{
+  color: red;
+  text-align: start;
+  position: absolute;
+  bottom: -1.5rem;
+}
+.loginform input.maderight{
+  border-color: rgb(0, 190, 0);
+}
+.loginform input.madeerror{
+  border-color: red;
+}
+.loginform input.madeerror:focus{
+  border-color: red;
+}
+.loginform input.maderight:focus{
+  border-color: rgb(0, 190, 0);
+}
+.loginform>div{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.loginform label{
+  font-weight: 600;
+  text-align: start;
+  font-family: markazi, serif;
+  font-size: 2rem;
+}
+.loginform input{
+  height: 2rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  font-size: 1rem;
+  font-family: 'Karla', sans-serif;
+}
+.loginform input:focus{
+  border-color: #F4CE14;
+  outline: none;
+}
+.loginform button{
+  height: 3.5rem;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  background: #495e57; /* Little Lemon vibe */
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.1s ease-in-out;
+}
+.loginform button:hover{
+  opacity: 0.8;
+}
+.loginform button:hover{
+  background: #3d514a;
+}
+.loginform button:active{
+  background-color: white;
+  border: #3d514a 1px solid;
+  color: #3d514a;
+}
+.loginform button.nologin{
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+}
+.loginform button.nologin:hover{
+  opacity: 1;
+}
+.loginform button.nologin:active{
+  transform: none;
 }
 /* MEDIA QUERIES BEGIN------------------------------------------------------------------------------------------------------- */
 @media (max-width: 768px) {
@@ -1829,6 +1949,40 @@ a {
 .shopping-cart>p{
   font-size: 1.5rem;
 }
+ .loginform {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem 1rem;
+    gap: 2.5rem;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .loginform label {
+    font-size: 1.6rem;
+  }
+
+  .loginform input {
+    height: 2.5rem;
+    font-size: 1rem;
+  }
+
+  .loginform span {
+    font-size: 0.85rem;
+    bottom: -1.3rem;
+  }
+
+  .loginform button {
+    height: 3.2rem;
+    font-size: 1.05rem;
+  }
+
+  .loginform p {
+    font-size: 1.1rem;
+  }
 }
 
 /*MEDIA END ------------------------------------------------------------------------------------------------------- */

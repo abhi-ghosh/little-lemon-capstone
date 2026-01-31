@@ -1,4 +1,5 @@
 import { useOutletContext, useNavigate } from "react-router";
+import { submitAPI } from "./api";
 
 export default function ConfirmBooking() {
   const { formData } = useOutletContext();
@@ -39,8 +40,23 @@ export default function ConfirmBooking() {
         </div>
       </div>
       <div className="confirmation-buttons">
-         <button onClick={() => navigate(-1) && window.scrollTo(0, 0)}>Edit</button>
-         <button onClick={() => navigate("../thankyou") && window.scrollTo(0, 0)}>Submit</button>
+         <button
+            onClick={() => {
+                navigate(-1);
+                window.scrollTo(0, 0);
+              }}
+          >
+            Edit
+          </button>
+         <button
+          onClick={() => {
+            submitAPI(formData);
+            navigate("../thankyou");
+            window.scrollTo(0, 0);
+          }}
+        >
+          Submit
+        </button>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import { Outlet } from "react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { fetchAPI } from "./api";
 
 export default function Booking() {
   const [formData, setFormData] = useState({
@@ -8,10 +9,20 @@ export default function Booking() {
     guests: 1,
     occasion: ""
   });
+  const [times, setTimes] = useState([]);
+
+  useEffect(() => {
+    if (!formData.date) return;
+
+    const dateObj = new Date(formData.date);
+    if (isNaN(dateObj)) return;
+
+    setTimes(fetchAPI(dateObj));
+  }, [formData.date]);
 
   return (
     <div className="booking">
-      <Outlet context={{ formData, setFormData }} />
+      <Outlet context={{ formData, setFormData, times }} />
     </div>
   );
 }

@@ -1,19 +1,19 @@
 import { useOutletContext, useNavigate } from "react-router";
 
 export default function BookingForm() {
-  const { formData, setFormData } = useOutletContext();
+  const { formData, setFormData, times } = useOutletContext();
   const navigate = useNavigate();
-  const timeFunc = (open,close) => {
-    const time = [];
-    for (let i=open; i<=close; i++){
-        if (i>=15 && i<17) continue;
-        for (let j=0; j<60; j+=30){
-            if (i === close && j > 0) break;
-            time.push (`${String(i).padStart(2, "0")}:${String(j).padStart(2, "0")}`)
-        }
-    }
-    return time;
-}
+  // const timeFunc = (open,close) => {
+//     const time = [];
+//     for (let i=open; i<=close; i++){
+//         if (i>=15 && i<17) continue;
+//         for (let j=0; j<60; j+=30){
+//             if (i === close && j > 0) break;
+//             time.push (`${String(i).padStart(2, "0")}:${String(j).padStart(2, "0")}`)
+//         }
+//     }
+//     return time;
+// }
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
@@ -117,7 +117,7 @@ export default function BookingForm() {
             onChange={handleChange}
           >
             <option value="" disabled>Select a time</option>
-            {timeFunc(12, 22).map(time => (
+            {times.map(time => (
               <option key={time} value={time}>
                 {time}
               </option>
@@ -166,7 +166,10 @@ export default function BookingForm() {
           className="primary-btn"
           disabled={!isFormValid}
           type="button"
-          onClick={() => navigate("confirm")&& window.scrollTo(0, 0)}
+          onClick={() => {
+            navigate("confirm");
+            window.scrollTo(0, 0);
+          }}
         >
           Next
         </button>
