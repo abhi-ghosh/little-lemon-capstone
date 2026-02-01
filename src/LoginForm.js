@@ -21,7 +21,7 @@ export default function LoginForm({loginData, setLoginData, changeSection}) {
         {passwordError && (<span className=''>Password must be at least 8 characters</span>)}
       </div>
       <button className={!formValid ? 'nologin': ''} disabled={!formValid} type='submit'>Login</button>
-      <p>Don't have an account? <Link onClick={changeSection}>Register </Link></p>
+      <p>Don't have an account? <Link onClick={()=>{changeSection(); window.scrollTo(0, 0)}}>Register </Link></p>
     </div>
   );
 }

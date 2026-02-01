@@ -1,12 +1,14 @@
 import {React, useState} from 'react';
 import LoginForm from './LoginForm';
+import RegisterForm from './RegisterForm';
 export default function Login() {
   const [loginData, setLoginData] = useState({
     email: "",
     password: ""
   })
   const [signupData, setSignupData] = useState({
-    name: "",
+    firstname: "",
+    lastname: "",
     email: "",
     password: ""
   })
@@ -15,8 +17,12 @@ export default function Login() {
     section === "login" ? setSection("register") : setSection("login");
   }
   return (
-    <div className="login-container">
-      {section === "login" && <LoginForm loginData={loginData} setLoginData={setLoginData} changeSection={changeSection}/>}
-    </div>
+    <>
+      {
+        section === "login" ?
+        <LoginForm loginData={loginData} setLoginData={setLoginData} changeSection={changeSection}/>
+        :<RegisterForm signupData={signupData} setSignupData={setSignupData} changeSection={changeSection}/>
+      }
+    </>
   );
 }
