@@ -4,6 +4,9 @@ import { fetchAPI } from "./api";
 
 export default function Booking() {
   const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
     date: "",
     time: "",
     guests: 1,

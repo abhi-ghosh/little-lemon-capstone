@@ -33,6 +33,8 @@ export default function BookingForm() {
   const isDateValid = formData.date && formData.date >= minDate && formData.date <= maxDate; //Check if "date" is between minDate and maxDate
   const dateError = formData.date && !isDateValid
   const dateSuccess =formData.date && isDateValid
+  const phoneError = formData.phone && formData.phone.length !== 10;
+  const phoneSuccess = formData.phone && formData.phone.length === 10;
 
 
   const isFormValid =
@@ -81,6 +83,26 @@ export default function BookingForm() {
             {emailError && (
               <span className="error">Please enter a valid email address.</span>
             )}
+          </div>
+        </div>
+        <div className="form-row">
+          <label htmlFor="phone">Phone:</label>
+          <div className="input-column">
+            <input
+              id="phone"
+              type="number"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              placeholder="Phone"
+              className={phoneError
+                          ? "input-error"
+                          : phoneSuccess
+                          ? "input-success"
+                          : ""
+              }
+            />
+            {phoneError && (<span className="error">Please enter a valid 10-digit phone number.</span>)}
           </div>
         </div>
 
