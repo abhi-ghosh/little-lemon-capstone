@@ -43,7 +43,9 @@ export default function BookingForm() {
   dateSuccess&&
   formData.time &&
   isGuestsValid &&
-  isEmailValid;
+  isEmailValid &&
+  phoneSuccess;
+
   return (
     <div>
       <h1>Book a Table</h1>
