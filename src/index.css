@@ -494,7 +494,7 @@ a {
   width: 55%;
   height: 100%;
   object-fit: cover;
-  object-position: -210px;
+  object-position: 90% center;
   z-index: 2;
   box-shadow: 0 6px 10px rgba(0,0,0,0.15);
   border: #333 1px solid;
@@ -506,7 +506,7 @@ a {
   height: 100%;
   object-fit: cover;
   position: absolute;
-  object-position: -200px;
+  object-position: 90% center;
   left: 0;
   bottom: -80px;
   box-shadow: 0 6px 10px rgba(0,0,0,0.15);
@@ -1111,14 +1111,13 @@ a {
   border: #495E57 0.1rem solid;
   border-radius: 12px;
   overflow: hidden;
+  background-color: red;
 }
 
 .about-image img,
 .chefs-image img {
   width: 100%;
-  max-width: 28rem;
-  height: 20rem;
-  object-fit: cover;
+  object-fit: s;
   box-shadow: 0 8px 16px rgba(0,0,0,0.15);
 }
 
