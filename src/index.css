@@ -880,7 +880,6 @@ a {
   grid-template-columns: repeat(3, 1fr);
   gap: 2.5rem;
 }
-
 .menu-item-card{
   height: 25rem;
   display: flex;
@@ -2093,6 +2092,12 @@ a {
 }
 .shopping-cart>p{
   font-size: 1.5rem;
+}
+.shopping-cart:hover{
+  opacity: 1;
+}
+.shopping-cart:active{
+  transform: translateX(50%) scale(0.97);
 }
  .loginform {
     width: 100%;
