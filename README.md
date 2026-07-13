@@ -16,9 +16,7 @@
 
 # 🎥 Demo
 
-[![Watch Demo](./screenshots/desktop/homepage.webp)](./screenshots/little-lemon-demo.mp4)
-
-> ▶️ Click the image above to watch the full application walkthrough.
+https://github.com/user-attachments/assets/895e089b-0b49-461b-bc91-7f73b0b91e63
 
 ---
 
