@@ -16,7 +16,7 @@
 
 # 🎥 Demo
 
-https://github.com/user-attachments/assets/895e089b-0b49-461b-bc91-7f73b0b91e63
+https://github.com/user-attachments/assets/746fe051-7ab7-4a64-9a7a-ea14c44fcbef
 
 ---
 
