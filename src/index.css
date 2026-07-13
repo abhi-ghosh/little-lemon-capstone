@@ -2007,6 +2007,7 @@ a {
 }
 .order-online {
     padding: 1rem;
+    max-width: 100%;
   }
 
   .cart {

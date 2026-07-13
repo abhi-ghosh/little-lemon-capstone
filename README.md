@@ -1,70 +1,230 @@
-# Getting Started with Create React App
+# 🍋 Little Lemon
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![Create React App](https://img.shields.io/badge/Create%20React%20App-CRA-09D3AC)
+![Responsive](https://img.shields.io/badge/Responsive-Desktop%20%26%20Mobile-success)
+![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
-In the project directory, you can run:
+</p>
 
-### `npm start`
+<p align="center">
+<strong>A responsive restaurant web application built with React.</strong><br>
+Browse the menu, reserve a table, manage your shopping cart, and experience a modern restaurant website designed with responsiveness and usability in mind.
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p align="center">
+<video src="./screenshots/little-lemon-demo.mp4" controls width="100%"></video>
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+# ✨ Overview
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Little Lemon is a modern restaurant web application built with **React** using **Create React App** as part of the **Meta Front-End Developer Professional Certificate**.
 
-### `npm run build`
+The goal of the project was to build a complete restaurant experience that feels like a real-world application while demonstrating responsive layouts, reusable React components, routing, client-side validation, and shopping cart functionality.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Every page has been designed for both desktop and mobile users, ensuring a consistent experience across different screen sizes.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 🚀 Features
 
-### `npm run eject`
+- 🍽 Browse a complete restaurant menu
+- 🛒 Fully functional shopping cart
+- ➕ Increase and decrease item quantities
+- 🗑 Remove items from the cart
+- 💰 Live cart total calculations
+- 🔍 Sort menu by:
+  - Price
+  - Calories
+  - Alphabetically
+- 🎯 Filter menu categories
+- 📅 Reservation system with client-side validation
+- 🔐 Login and Registration pages
+- 📱 Responsive desktop and mobile layouts
+- 🧭 Client-side routing with React Router
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# 📸 Application Preview
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🏠 Home Page
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Desktop                                                      | Mobile                                                            |
+| ------------------------------------------------------------ | ----------------------------------------------------------------- |
+| <img src="./screenshots/desktop/homepage.webp" width="100%"> | <img src="./screenshots/mobile/homepage-mobile.webp" width="45%"> |
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## ℹ️ About
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Desktop                                                   | Mobile                                                         |
+| --------------------------------------------------------- | -------------------------------------------------------------- |
+| <img src="./screenshots/desktop/about.webp" width="100%"> | <img src="./screenshots/mobile/about-mobile.webp" width="45%"> |
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🍽 Menu
 
-### Analyzing the Bundle Size
+| Desktop                                                  | Mobile                                                        |
+| -------------------------------------------------------- | ------------------------------------------------------------- |
+| <img src="./screenshots/desktop/menu.webp" width="100%"> | <img src="./screenshots/mobile/menu-mobile.webp" width="45%"> |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Menu Highlights
 
-### Making a Progressive Web App
+- Sort dishes by price
+- Sort dishes by calories
+- Alphabetical sorting
+- Filter categories
+- Responsive mobile filter sheets
+- Live shopping cart updates
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 🛒 Shopping Cart
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+| Desktop                                                   | Mobile                                                         |
+| --------------------------------------------------------- | -------------------------------------------------------------- |
+| <img src="./screenshots/desktop/order.webp" width="100%"> | <img src="./screenshots/mobile/order-mobile.webp" width="45%"> |
 
-### Deployment
+Shopping cart features include:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- Live quantity updates
+- Dynamic total calculation
+- Item removal
+- Responsive checkout experience
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📅 Reservation
+
+| Desktop                                                         | Mobile                                                               |
+| --------------------------------------------------------------- | -------------------------------------------------------------------- |
+| <img src="./screenshots/desktop/reservation.webp" width="100%"> | <img src="./screenshots/mobile/reservation-mobile.webp" width="45%"> |
+
+The reservation page includes comprehensive client-side validation to ensure users receive immediate feedback before submitting the form.
+
+---
+
+## 🔐 Login
+
+| Desktop                                                   | Mobile                                                         |
+| --------------------------------------------------------- | -------------------------------------------------------------- |
+| <img src="./screenshots/desktop/login.webp" width="100%"> | <img src="./screenshots/mobile/login-mobile.webp" width="45%"> |
+
+---
+
+## 📝 Register
+
+| Desktop                                                      | Mobile                                                            |
+| ------------------------------------------------------------ | ----------------------------------------------------------------- |
+| <img src="./screenshots/desktop/register.webp" width="100%"> | <img src="./screenshots/mobile/register-mobile.webp" width="45%"> |
+
+---
+
+## 🍋 Footer
+
+| Desktop                                                    | Mobile                                                          |
+| ---------------------------------------------------------- | --------------------------------------------------------------- |
+| <img src="./screenshots/desktop/footer.webp" width="100%"> | <img src="./screenshots/mobile/footer-mobile.webp" width="45%"> |
+
+---
+
+# 🏗 Tech Stack
+
+| Technology        | Purpose             |
+| ----------------- | ------------------- |
+| React             | User Interface      |
+| React Router      | Client-side Routing |
+| JavaScript (ES6+) | Application Logic   |
+| HTML5             | Markup              |
+| CSS3              | Responsive Styling  |
+| Create React App  | Project Scaffolding |
+
+---
+
+# 📂 Project Structure
+
+```text
+little-lemon-capstone
+│
+├── public/
+├── screenshots/
+│   ├── desktop/
+│   ├── mobile/
+│   └── little-lemon-demo.mp4
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── App.js
+│   └── index.js
+│
+├── package.json
+└── README.md
+```
+
+---
+
+# ⚙️ Getting Started
+
+Clone the repository
+
+```bash
+git clone https://github.com/abhi-ghosh/little-lemon-capstone.git
+```
+
+Navigate into the project
+
+```bash
+cd little-lemon-capstone
+```
+
+Install dependencies
+
+```bash
+npm install
+```
+
+Start the development server
+
+```bash
+npm start
+```
+
+Create a production build
+
+```bash
+npm run build
+```
+
+---
+
+# 🧠 What I Learned
+
+Building Little Lemon helped strengthen my understanding of:
+
+- Building larger React applications
+- Creating reusable components
+- Responsive web design
+- Client-side routing with React Router
+- Client-side form validation
+- Shopping cart state management
+- Organizing scalable project structures
+- Creating polished user experiences across desktop and mobile
+
+---
+
+# 📄 License
+
+This project was created for educational purposes as part of the **Meta Front-End Developer Professional Certificate**.
+
+---
+
+<p align="center">
+Built with ❤️ by <strong>Abhijit Ghosh</strong>
+</p>
