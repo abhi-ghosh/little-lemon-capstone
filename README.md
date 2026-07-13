@@ -1,22 +1,24 @@
 # 🍋 Little Lemon
 
-<p align="center">
+A responsive restaurant web application built with **React**.
+
+Browse the menu, reserve a table, manage your shopping cart, and experience a modern restaurant website designed with responsiveness and usability in mind.
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=reactrouter&logoColor=white)
 ![Create React App](https://img.shields.io/badge/Create%20React%20App-CRA-09D3AC)
 ![Responsive](https://img.shields.io/badge/Responsive-Desktop%20%26%20Mobile-success)
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
 
-</p>
+---
 
-<p align="center">
-<strong>A responsive restaurant web application built with React.</strong><br>
-Browse the menu, reserve a table, manage your shopping cart, and experience a modern restaurant website designed with responsiveness and usability in mind.
-</p>
+# 🎥 Application Walkthrough
 
-<p align="center">
-<video src="./screenshots/little-lemon-demo.mp4" controls width="100%"></video>
-</p>
+> **Click the image below to watch the full 2 minute 30 second walkthrough.**
+
+<a href="./screenshots/little-lemon-demo.mp4">
+    <img src="./screenshots/desktop/homepage.webp" alt="Little Lemon Demo">
+</a>
 
 ---
 
@@ -24,38 +26,38 @@ Browse the menu, reserve a table, manage your shopping cart, and experience a mo
 
 Little Lemon is a modern restaurant web application built with **React** using **Create React App** as part of the **Meta Front-End Developer Professional Certificate**.
 
-The goal of the project was to build a complete restaurant experience that feels like a real-world application while demonstrating responsive layouts, reusable React components, routing, client-side validation, and shopping cart functionality.
+The application recreates the experience of a modern restaurant website while demonstrating reusable React components, client-side routing, responsive layouts, form validation, and shopping cart functionality.
 
-Every page has been designed for both desktop and mobile users, ensuring a consistent experience across different screen sizes.
+Every page has been designed for both desktop and mobile devices to provide a consistent user experience across different screen sizes.
 
 ---
 
 # 🚀 Features
 
-- 🍽 Browse a complete restaurant menu
+- 🍽 Interactive restaurant menu
 - 🛒 Fully functional shopping cart
 - ➕ Increase and decrease item quantities
-- 🗑 Remove items from the cart
+- 🗑 Remove items instantly
 - 💰 Live cart total calculations
-- 🔍 Sort menu by:
+- 🔍 Sort dishes by:
   - Price
   - Calories
   - Alphabetically
 - 🎯 Filter menu categories
 - 📅 Reservation system with client-side validation
-- 🔐 Login and Registration pages
-- 📱 Responsive desktop and mobile layouts
+- 🔐 Login & Registration pages
+- 📱 Responsive desktop & mobile layouts
 - 🧭 Client-side routing with React Router
 
 ---
 
 # 📸 Application Preview
 
-## 🏠 Home Page
+## 🏠 Home
 
 | Desktop                                                      | Mobile                                                            |
 | ------------------------------------------------------------ | ----------------------------------------------------------------- |
-| <img src="./screenshots/desktop/homepage.webp" width="100%"> | <img src="./screenshots/mobile/homepage-mobile.webp" width="45%"> |
+| <img src="./screenshots/desktop/homepage.webp" width="100%"> | <img src="./screenshots/mobile/homepage-mobile.webp" width="85%"> |
 
 ---
 
@@ -63,23 +65,23 @@ Every page has been designed for both desktop and mobile users, ensuring a consi
 
 | Desktop                                                   | Mobile                                                         |
 | --------------------------------------------------------- | -------------------------------------------------------------- |
-| <img src="./screenshots/desktop/about.webp" width="100%"> | <img src="./screenshots/mobile/about-mobile.webp" width="45%"> |
+| <img src="./screenshots/desktop/about.webp" width="100%"> | <img src="./screenshots/mobile/about-mobile.webp" width="85%"> |
 
 ---
 
-## 🍽 Menu
+## 🍽 Interactive Menu
 
 | Desktop                                                  | Mobile                                                        |
 | -------------------------------------------------------- | ------------------------------------------------------------- |
-| <img src="./screenshots/desktop/menu.webp" width="100%"> | <img src="./screenshots/mobile/menu-mobile.webp" width="45%"> |
+| <img src="./screenshots/desktop/menu.webp" width="100%"> | <img src="./screenshots/mobile/menu-mobile.webp" width="85%"> |
 
-### Menu Highlights
+### Highlights
 
-- Sort dishes by price
-- Sort dishes by calories
+- Sort by price
+- Sort by calories
 - Alphabetical sorting
-- Filter categories
-- Responsive mobile filter sheets
+- Category filtering
+- Responsive filter sheets
 - Live shopping cart updates
 
 ---
@@ -88,24 +90,24 @@ Every page has been designed for both desktop and mobile users, ensuring a consi
 
 | Desktop                                                   | Mobile                                                         |
 | --------------------------------------------------------- | -------------------------------------------------------------- |
-| <img src="./screenshots/desktop/order.webp" width="100%"> | <img src="./screenshots/mobile/order-mobile.webp" width="45%"> |
+| <img src="./screenshots/desktop/order.webp" width="100%"> | <img src="./screenshots/mobile/order-mobile.webp" width="85%"> |
 
-Shopping cart features include:
+Shopping cart functionality includes:
 
 - Live quantity updates
-- Dynamic total calculation
+- Dynamic total calculations
 - Item removal
-- Responsive checkout experience
+- Responsive checkout layout
 
 ---
 
-## 📅 Reservation
+## 📅 Reservation System
 
 | Desktop                                                         | Mobile                                                               |
 | --------------------------------------------------------------- | -------------------------------------------------------------------- |
-| <img src="./screenshots/desktop/reservation.webp" width="100%"> | <img src="./screenshots/mobile/reservation-mobile.webp" width="45%"> |
+| <img src="./screenshots/desktop/reservation.webp" width="100%"> | <img src="./screenshots/mobile/reservation-mobile.webp" width="85%"> |
 
-The reservation page includes comprehensive client-side validation to ensure users receive immediate feedback before submitting the form.
+The reservation form provides instant client-side validation, giving users immediate feedback before submission.
 
 ---
 
@@ -113,15 +115,15 @@ The reservation page includes comprehensive client-side validation to ensure use
 
 | Desktop                                                   | Mobile                                                         |
 | --------------------------------------------------------- | -------------------------------------------------------------- |
-| <img src="./screenshots/desktop/login.webp" width="100%"> | <img src="./screenshots/mobile/login-mobile.webp" width="45%"> |
+| <img src="./screenshots/desktop/login.webp" width="100%"> | <img src="./screenshots/mobile/login-mobile.webp" width="85%"> |
 
 ---
 
-## 📝 Register
+## 📝 Registration
 
 | Desktop                                                      | Mobile                                                            |
 | ------------------------------------------------------------ | ----------------------------------------------------------------- |
-| <img src="./screenshots/desktop/register.webp" width="100%"> | <img src="./screenshots/mobile/register-mobile.webp" width="45%"> |
+| <img src="./screenshots/desktop/register.webp" width="100%"> | <img src="./screenshots/mobile/register-mobile.webp" width="85%"> |
 
 ---
 
@@ -129,7 +131,7 @@ The reservation page includes comprehensive client-side validation to ensure use
 
 | Desktop                                                    | Mobile                                                          |
 | ---------------------------------------------------------- | --------------------------------------------------------------- |
-| <img src="./screenshots/desktop/footer.webp" width="100%"> | <img src="./screenshots/mobile/footer-mobile.webp" width="45%"> |
+| <img src="./screenshots/desktop/footer.webp" width="100%"> | <img src="./screenshots/mobile/footer-mobile.webp" width="85%"> |
 
 ---
 
@@ -149,7 +151,7 @@ The reservation page includes comprehensive client-side validation to ensure use
 # 📂 Project Structure
 
 ```text
-little-lemon-capstone
+little-lemon-capstone/
 │
 ├── public/
 ├── screenshots/
@@ -206,16 +208,16 @@ npm run build
 
 # 🧠 What I Learned
 
-Building Little Lemon helped strengthen my understanding of:
+Developing Little Lemon strengthened my understanding of:
 
 - Building larger React applications
 - Creating reusable components
 - Responsive web design
 - Client-side routing with React Router
 - Client-side form validation
-- Shopping cart state management
+- Shopping cart logic
 - Organizing scalable project structures
-- Creating polished user experiences across desktop and mobile
+- Delivering polished user experiences across desktop and mobile
 
 ---
 
