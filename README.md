@@ -54,25 +54,25 @@ Every page has been designed for both desktop and mobile devices to provide a co
 
 ## 🏠 Home
 
-| Desktop                                                      | Mobile                                                            |
-| ------------------------------------------------------------ | ----------------------------------------------------------------- |
-| <img src="./screenshots/desktop/homepage.webp" width="100%"> | <img src="./screenshots/mobile/homepage-mobile.webp" width="85%"> |
+| Desktop                                                      | Mobile                                                             |
+| ------------------------------------------------------------ | ------------------------------------------------------------------ |
+| <img src="./screenshots/desktop/homepage.webp" width="100%"> | <img src="./screenshots/mobile/homepage-mobile.webp" width="100%"> |
 
 ---
 
 ## ℹ️ About
 
-| Desktop                                                   | Mobile                                                         |
-| --------------------------------------------------------- | -------------------------------------------------------------- |
-| <img src="./screenshots/desktop/about.webp" width="100%"> | <img src="./screenshots/mobile/about-mobile.webp" width="85%"> |
+| Desktop                                                   | Mobile                                                          |
+| --------------------------------------------------------- | --------------------------------------------------------------- |
+| <img src="./screenshots/desktop/about.webp" width="100%"> | <img src="./screenshots/mobile/about-mobile.webp" width="100%"> |
 
 ---
 
 ## 🍽 Interactive Menu
 
-| Desktop                                                  | Mobile                                                        |
-| -------------------------------------------------------- | ------------------------------------------------------------- |
-| <img src="./screenshots/desktop/menu.webp" width="100%"> | <img src="./screenshots/mobile/menu-mobile.webp" width="85%"> |
+| Desktop                                                  | Mobile                                                         |
+| -------------------------------------------------------- | -------------------------------------------------------------- |
+| <img src="./screenshots/desktop/menu.webp" width="100%"> | <img src="./screenshots/mobile/menu-mobile.webp" width="100%"> |
 
 ### Highlights
 
@@ -87,9 +87,9 @@ Every page has been designed for both desktop and mobile devices to provide a co
 
 ## 🛒 Shopping Cart
 
-| Desktop                                                   | Mobile                                                         |
-| --------------------------------------------------------- | -------------------------------------------------------------- |
-| <img src="./screenshots/desktop/order.webp" width="100%"> | <img src="./screenshots/mobile/order-mobile.webp" width="85%"> |
+| Desktop                                                   | Mobile                                                          |
+| --------------------------------------------------------- | --------------------------------------------------------------- |
+| <img src="./screenshots/desktop/order.webp" width="100%"> | <img src="./screenshots/mobile/order-mobile.webp" width="100%"> |
 
 Shopping cart functionality includes:
 
@@ -102,9 +102,9 @@ Shopping cart functionality includes:
 
 ## 📅 Reservation System
 
-| Desktop                                                         | Mobile                                                               |
-| --------------------------------------------------------------- | -------------------------------------------------------------------- |
-| <img src="./screenshots/desktop/reservation.webp" width="100%"> | <img src="./screenshots/mobile/reservation-mobile.webp" width="85%"> |
+| Desktop                                                         | Mobile                                                                |
+| --------------------------------------------------------------- | --------------------------------------------------------------------- |
+| <img src="./screenshots/desktop/reservation.webp" width="100%"> | <img src="./screenshots/mobile/reservation-mobile.webp" width="100%"> |
 
 The reservation form provides instant client-side validation, giving users immediate feedback before submission.
 
@@ -112,25 +112,25 @@ The reservation form provides instant client-side validation, giving users immed
 
 ## 🔐 Login
 
-| Desktop                                                   | Mobile                                                         |
-| --------------------------------------------------------- | -------------------------------------------------------------- |
-| <img src="./screenshots/desktop/login.webp" width="100%"> | <img src="./screenshots/mobile/login-mobile.webp" width="85%"> |
+| Desktop                                                   | Mobile                                                          |
+| --------------------------------------------------------- | --------------------------------------------------------------- |
+| <img src="./screenshots/desktop/login.webp" width="100%"> | <img src="./screenshots/mobile/login-mobile.webp" width="100%"> |
 
 ---
 
 ## 📝 Registration
 
-| Desktop                                                      | Mobile                                                            |
-| ------------------------------------------------------------ | ----------------------------------------------------------------- |
-| <img src="./screenshots/desktop/register.webp" width="100%"> | <img src="./screenshots/mobile/register-mobile.webp" width="85%"> |
+| Desktop                                                      | Mobile                                                             |
+| ------------------------------------------------------------ | ------------------------------------------------------------------ |
+| <img src="./screenshots/desktop/register.webp" width="100%"> | <img src="./screenshots/mobile/register-mobile.webp" width="100%"> |
 
 ---
 
 ## 🍋 Footer
 
-| Desktop                                                    | Mobile                                                          |
-| ---------------------------------------------------------- | --------------------------------------------------------------- |
-| <img src="./screenshots/desktop/footer.webp" width="100%"> | <img src="./screenshots/mobile/footer-mobile.webp" width="85%"> |
+| Desktop                                                    | Mobile                                                           |
+| ---------------------------------------------------------- | ---------------------------------------------------------------- |
+| <img src="./screenshots/desktop/footer.webp" width="100%"> | <img src="./screenshots/mobile/footer-mobile.webp" width="100%"> |
 
 ---
 
