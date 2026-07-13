@@ -14,11 +14,12 @@
 
 # 🎥 Application Walkthrough
 
-> **Click the image below to watch the full 2 minute 30 second walkthrough.**
+# 🎥 Demo
 
-<video autoplay muted loop playsinline>
-  <source src="./screenshots/little-lemon-demo.mp4" type="video/mp4">
-</video>
+[![Watch Demo](./screenshots/desktop/homepage.webp)](./screenshots/little-lemon-demo.mp4)
+
+> ▶️ Click the image above to watch the full application walkthrough.
+
 ---
 
 # ✨ Overview
