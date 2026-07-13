@@ -1,8 +1,8 @@
 # 🍋 Little Lemon
 
-A responsive restaurant web application built with **React**.
+## A responsive restaurant web application built with **React**.
 
-Browse the menu, reserve a table, manage your shopping cart, and experience a modern restaurant website designed with responsiveness and usability in mind.
+### Browse the menu, reserve a table, manage your shopping cart, and experience a modern restaurant website designed with responsiveness and usability in mind.
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
 ![React Router](https://img.shields.io/badge/React_Router-v7-CA4245?logo=reactrouter&logoColor=white)
@@ -16,10 +16,9 @@ Browse the menu, reserve a table, manage your shopping cart, and experience a mo
 
 > **Click the image below to watch the full 2 minute 30 second walkthrough.**
 
-<a href="./screenshots/little-lemon-demo.mp4">
-    <img src="./screenshots/desktop/homepage.webp" alt="Little Lemon Demo">
-</a>
-
+<video autoplay muted loop playsinline>
+  <source src="./screenshots/little-lemon-demo.mp4" type="video/mp4">
+</video>
 ---
 
 # ✨ Overview
